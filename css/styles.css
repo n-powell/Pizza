@@ -3,9 +3,6 @@
   background-image: url(../img/banner.jpg);
   background-size: 100%;
   color: rgba(90, 25, 28, 1);
-ß
-
-
 }
 
 .container {
@@ -14,9 +11,7 @@
   padding-top: 20px;
   padding-bottom: 20px;
   border-radius: 20px;
-
 }
-
 
 .container h5, h2, p {
   font-variant: small-caps;
