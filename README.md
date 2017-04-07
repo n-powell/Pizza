@@ -31,7 +31,7 @@
 * _Input: pepperoni; large;_
 * _Output: Your pizza is a large pepperoni._
 
-#### _If the user inputs both toppings and size, page will display both size and topping selections, and a price for that pizza._
+#### _If the user inputs both toppings and size, page will display both size and topping selections, and a *price* for that pizza._
 * _Example:_
 * _Input: pepperoni; large;_
 * _Output: Your pizza is a large pepperoni. Your pizza will be $20_

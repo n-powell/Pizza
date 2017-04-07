@@ -3,6 +3,7 @@
 function Pizza () {
   this.toppings = [];
   this.pizzaSize = "";
+  this.pizzaPrice = "";
 
 }
 
@@ -10,6 +11,13 @@ Pizza.prototype.fullPizza = function() {
   return  "Your " + [this.pizzaSize] + " pizza. With " + [this.toppings] + " .Will be $";
 }
 
+Pizza.prototype.pizzaCalc = function() {
+  if (this.pizzaSize === "large") {
+    return  20
+  }
+  else
+    return 12
+}
 
 
 
@@ -26,11 +34,13 @@ $(document).ready(function(){
       var size = $(this).val();
       newPizza.pizzaSize = size;
     });
+    var pizzaPrice = newPizza.pizzaCalc
 
     $("ol#toppings").append("<li>" + newPizza.toppings + "</li>");
     $("#newSize").append("<li>" + newPizza.pizzaSize + "</li>");
     $("#description").append("<li>" + newPizza.fullPizza() + "</li>");
     console.log(newPizza);
+    console.log(newPizza.pizzaCalc());
 
   });
 });
