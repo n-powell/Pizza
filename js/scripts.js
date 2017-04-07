@@ -1,7 +1,7 @@
 //Business Logic---------
 
-function Pizza (topping) {
-  this.toppings = topping;
+function Pizza () {
+  this.toppings = [];
 
 }
 
@@ -16,11 +16,24 @@ Pizza.prototype.fullPizza = function() {
 $(document).ready(function(){
   $("form#new-pizza").submit(function(event) {
     event.preventDefault();
+    var newPizza = new Pizza();
 
-    var inputtedToppings = $("input#new-toppings").val();
+    var inputtedToppings = $("input:checkbox[name=toppings]:checked").each(function(){
+      var topping = $(this).val();
+      newPizza.toppings.push(topping);
+      console.log(newPizza.toppings);
+
     var inputtedSize = $("input#size").val();
-    console.log(inputtedToppings);
-    $("ul#toppings").append("<li>" + inputtedToppings + "</li>");
+
+
+
+
+
+
+    $("ul#toppings").append("<li>" + newPizza.toppings + "</li>");
+
+
+    });
 
   });
 
