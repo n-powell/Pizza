@@ -8,7 +8,7 @@ function Pizza () {
 }
 
 Pizza.prototype.fullPizza = function() {
-  return  "Your " + [this.pizzaSize] + " pizza. With " + [this.toppings] + " .Will be $";
+  return  "Your " + this.pizzaSize + " pizza. With " + [this.toppings] + " . Will be $" + this.pizzaPrice + " dollars. Thank You!";
 }
 
 Pizza.prototype.pizzaCalc = function() {
@@ -34,13 +34,14 @@ $(document).ready(function(){
       var size = $(this).val();
       newPizza.pizzaSize = size;
     });
-    var pizzaPrice = newPizza.pizzaCalc
+    newPizza.pizzaPrice = newPizza.pizzaCalc();
 
     $("ol#toppings").append("<li>" + newPizza.toppings + "</li>");
     $("#newSize").append("<li>" + newPizza.pizzaSize + "</li>");
+    $("#outputPrice").append("<li> $" + newPizza.pizzaPrice + " dollars</li>")
     $("#description").append("<li>" + newPizza.fullPizza() + "</li>");
     console.log(newPizza);
-    console.log(newPizza.pizzaCalc());
+    console.log(newPizza.pizzaPrice);
 
   });
 });
