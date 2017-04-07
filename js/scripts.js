@@ -2,12 +2,12 @@
 
 function Pizza () {
   this.toppings = [];
-  this.pizzaSize = [];
+  this.pizzaSize = "";
 
 }
 
 Pizza.prototype.fullPizza = function() {
-  return  "Your" + this.pizzaSize + "pizza. With" + this.toppings + ".Will be";
+  return  "Your " + [this.pizzaSize] + " pizza. With " + [this.toppings] + " .Will be $";
 }
 
 
@@ -26,32 +26,20 @@ $(document).ready(function(){
 
     var inputtedSize = $("input:radio[name=size]:checked").each(function(){
       var size = $(this).val();
-      newPizza.pizzaSize.push(size);
+      newPizza.pizzaSize = size;
     });
-
-
-
-
-
-
 
 
 
     console.log(newPizza.pizzaSize);
     console.log(newPizza.toppings);
-    console.log(newPizza.fullpizza);
+    console.log(newPizza.fullPizza());
 
 
 
-    $("ul#toppings").append("<li>" + newPizza.toppings + "</li>");
+    $("ol#toppings").append("<li>" + newPizza.toppings + "</li>");
     $("#newSize").append("<li>" + newPizza.pizzaSize + "</li>");
+    $("#description").append("<li>" + newPizza.fullPizza() + "</li>");
 
   });
-
-
-
-
-
-
-
 });
