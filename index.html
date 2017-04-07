@@ -12,7 +12,7 @@
       <h1>Pizza Place Pizza Pie</h1>
       <h4></h4>
     </div>
-    <div class="Container">
+    <div class="container">
 
       <div class="row">
 
@@ -26,7 +26,17 @@
             </div>
 
 
-
+            <div class="radio" id="size">
+            <h5>Large or Small</h5>
+            <label>
+              <input type="radio" name="size" value="large">
+              Large
+            </label>
+            <label>
+              <input type="radio" name="size" value="small">
+              Small
+             </label>
+          </div>
 
 
 
@@ -49,7 +59,7 @@
 
             <div class="form-group">
               <label for="new-size">Size</label>
-              <input type="text" class="form-control" id="new-size">
+              <input type="text" class="form-control" id="formnew-size">
             </div>
 
             <button type="submit" class="btn">Make my Pizza!</button>
@@ -64,7 +74,7 @@
             <p>Toppings: <ul id="toppings">
 
             </ul>
-            <p>Size: <span class="size"></span></p>
+            <p>Size: <span id="newSize"></span></p>
             <p>Price: <span id="outputPrice"></span></p>
 
           </div>
