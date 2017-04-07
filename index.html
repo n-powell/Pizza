@@ -10,7 +10,45 @@
   <body>
     <div class="jumbotron">
       <h1>Pizza Place Pizza Pie</h1>
+      <h4></h4>
+    </div>
+    <div class="Container">
 
+      <div class="row">
+
+        <div class="col-md-6">
+          <h2>Make a Pizza:</h2>
+
+          <form id="new-pizza">
+            <div class="form-group">
+              <label for="new-toppings">Toppings</label>
+              <input type="text" class="form-control" id="new-toppings">
+            </div>
+
+            <div class="form-group">
+              <label for="new-size">Size</label>
+              <input type="text" class="form-control" id="new-size">
+            </div>
+
+            <button type="submit" class="btn">Make my Pizza!</button>
+          </form>
+
+
+        </div>
+
+        <div class="col-md-6">
+          <div id="show-pizza">
+            <h2>Your Pizza</h2>
+            <p>Toppings: <ul id="Toppings">
+
+            </ul>
+            <p>Size: <span class="size"></span></p>
+            <p>Price: <span id="outputPrice"></span></p>
+
+          </div>
+        </div>
+
+      </div>
     </div>
   </body>
 </html>
